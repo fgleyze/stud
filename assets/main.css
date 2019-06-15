@@ -4,13 +4,12 @@
     width: 300px;
 }
 
-.frameDimensionsForm input {
+.frameDimensionsForm * {
     height: 30px;
     margin-bottom: 8px;
 }
 
 #frameTemplate {
-    border: 1px solid black;
     background: url("stud.svg") repeat left bottom;
     position: relative;
     margin: auto;
@@ -24,30 +23,53 @@
 
 .frame--rightStud {
     width: 7px;
-    height: calc(100% - 16px);
+    height: calc(100% - 24px);
     right: -1px;
-    top: 7px;
+    top: 15px;
+}
+
+.frame--rightStud--female {
+    right: 16px;
 }
 
 .frame--leftStud {
     width: 7px;
-    height: calc(100% - 16px);
+    height: calc(100% - 24px);
     left: -1px;
-    top: 7px;
+    top: 15px;
 }
 
-.frame--topPlate {
+.frame--leftStud--female {
+    left: 16px;
+}
+
+.frame--chaining {
     height: 7px;
     width: 100%;
     left: -1px;
     top: -1px;
 }
 
-.frame--bottomPlate {
+.frame--topPlate {
     height: 7px;
     width: 100%;
     left: -1px;
+    top: 7px;
+}
+
+.frame--bottomPlate {
+    height: 7px;
+    right: -1px;
+    left: -1px;
     bottom: -1px;
+}
+
+.frame--bottomPlate--leftFemale {
+    left: 16px;
+}
+
+.frame--bottomPlate--rightFemale {
+    right: 16px;
 }
 
 .dimension {
