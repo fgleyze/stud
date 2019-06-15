@@ -1,15 +1,39 @@
+const wall = document.getElementById('wall');
 const wallWidthValue = document.getElementById('js-input-wallWidth');
 const wallHeightValue = document.getElementById('js-input-wallHeight');
 const leftStudValue = document.getElementById('js-select-leftStud');
 const rightStudValue = document.getElementById('js-select-rightStud');
 
+const renderStuds = (width, offset = 0) => {
+    const studContainer = document.getElementById('js-studContainer');
+
+    while (studContainer.firstChild) {
+        studContainer.removeChild(studContainer.firstChild);
+    }
+
+    const numberOfStuds = Math.floor((width - 4 - offset)/60);
+    let i = 1;
+
+    while (i <= numberOfStuds) {
+        let stud = document.createElement("div");
+
+        stud.className = "member member--stud js-stud";
+        stud.style.left = i*120 + offset + 'px';
+        
+        studContainer.appendChild(stud);
+
+        i++;
+    }
+}
+
 const changeWidth = (width) => {
-    document.getElementById('wall').style.width = width * 2 + "px";
+    wall.style.width = width * 2 + "px";
     document.getElementById('js-display-wallWidth').innerHTML = width + " cms";
+    renderStuds(width);
 }
 
 const changeHeight = (height) => {
-    document.getElementById('wall').style.height = height * 2 + "px";
+    wall.style.height = height * 2 + "px";
     document.getElementById('js-display-wallHeight').innerHTML = height + " cms";
 }
 
@@ -32,10 +56,14 @@ leftStudValue.onchange = () => {
     document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--femaleOnLeft");
     document.getElementById('js-leftStud').classList.remove("member--leftStud--female");
 
+    renderStuds(wallWidthValue.value);
+
     if (leftStudValue.value === 'female') {
         document.getElementById('js-topPlate').classList.add("member--topPlate--femaleOnLeft");
         document.getElementById('js-bottomPlate').classList.add("member--bottomPlate--femaleOnLeft");
         document.getElementById('js-leftStud').classList.add("member--leftStud--female");
+
+        renderStuds(wallWidthValue.value, 18);
     } else if (leftStudValue.value === 'male') {
         document.getElementById('js-leftChaining').classList.remove("u-hidden");
         document.getElementById('js-topChaining').classList.add("member--topChaining--maleOnLeft");

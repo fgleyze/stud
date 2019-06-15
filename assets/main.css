@@ -10,7 +10,6 @@
 }
 
 #wall {
-    background: url("stud.svg") repeat left bottom;
     position: relative;
     margin: auto;
 }
@@ -91,6 +90,13 @@
     width: 27px;
     height: calc(100% - 24px);
     right: 7px;
+    top: 15px;
+}
+
+.member--stud {
+    width: 7px;
+    height: calc(100% - 24px);
+    left: 120px;
     top: 15px;
 }
 
