@@ -1,0 +1,90 @@
+.frameDimensionsForm {
+    margin: auto;
+    margin-bottom: 24px;
+    width: 300px;
+}
+
+.frameDimensionsForm input {
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+#frameTemplate {
+    border: 1px solid black;
+    background: url("stud.svg") repeat left bottom;
+    position: relative;
+    margin: auto;
+}
+
+.frame {
+    background-color: white;
+    border: 1px solid grey;
+    position: absolute;
+}
+
+.frame--rightStud {
+    width: 7px;
+    height: calc(100% - 16px);
+    right: -1px;
+    top: 7px;
+}
+
+.frame--leftStud {
+    width: 7px;
+    height: calc(100% - 16px);
+    left: -1px;
+    top: 7px;
+}
+
+.frame--topPlate {
+    height: 7px;
+    width: 100%;
+    left: -1px;
+    top: -1px;
+}
+
+.frame--bottomPlate {
+    height: 7px;
+    width: 100%;
+    left: -1px;
+    bottom: -1px;
+}
+
+.dimension {
+    display: flex;
+    position: absolute;
+} 
+
+.dimension--frameHeight {
+    height: 100%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    right: -20px;
+    width: 10px;
+}
+
+.dimension--frameHeight div {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    border-left: 1px solid grey;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+.dimension--frameWidth {
+    width: 100%;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    bottom: -20px;
+    height: 10px;
+}
+
+.dimension--frameWidth div {
+    justify-content: center;
+    display: flex;
+    border-top: 1px solid grey;
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 5px;
+}

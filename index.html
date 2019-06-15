@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MOB</title>
+    
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+
+<body>
+    <form class="frameDimensionsForm">
+        Largeur: <input type="number" id="js-input-frameWidth" value="400"> cms<br>
+        Hauteur: <input type="number" id="js-input-frameHeight"value="240"> cms<br>
+    </form>
+    <div id="frameTemplate">
+        <div class="dimension dimension--frameWidth"><div id="js-display-frameWidth"></div></div>
+        <div class="dimension dimension--frameHeight"><div id="js-display-frameHeight"></div></div>
+        <div class="frame frame--topPlate"></div>
+        <div class="frame frame--bottomPlate"></div>
+        <div class="frame frame--leftStud"></div>
+        <div class="frame frame--rightStud"></div>
+    </div>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
