@@ -43,11 +43,19 @@
     left: 16px;
 }
 
-.member--chaining {
+.member--topChaining {
     height: 7px;
-    width: 100%;
+    right: -1px;
     left: -1px;
     top: -1px;
+}
+
+.member--topChaining--maleOnLeft {
+    left: 16px;
+}
+
+.member--topChaining--maleOnRight {
+    right: 16px;
 }
 
 .member--topPlate {
@@ -70,6 +78,20 @@
 
 .member--topPlate--femaleOnRight, .member--bottomPlate--femaleOnRight  {
     right: 16px;
+}
+
+.member--leftChaining {
+    width: 27px;
+    height: calc(100% - 24px);
+    left: 7px;
+    top: 15px;
+}
+
+.member--rightChaining {
+    width: 27px;
+    height: calc(100% - 24px);
+    right: 7px;
+    top: 15px;
 }
 
 .dimension {
@@ -109,4 +131,8 @@
     width: 100%;
     margin-top: 5px;
     padding-top: 5px;
+}
+
+.u-hidden {
+    display: none;
 }

@@ -25,25 +25,37 @@ wallHeightValue.onkeyup = () => {
 }
 
 leftStudValue.onchange = () => {
+    document.getElementById('js-leftChaining').classList.add("u-hidden");
+    document.getElementById('js-topChaining').classList.remove("member--topChaining--maleOnLeft");
+
+    document.getElementById('js-topPlate').classList.remove("member--topPlate--femaleOnLeft");
+    document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--femaleOnLeft");
+    document.getElementById('js-leftStud').classList.remove("member--leftStud--female");
+
     if (leftStudValue.value === 'female') {
         document.getElementById('js-topPlate').classList.add("member--topPlate--femaleOnLeft");
         document.getElementById('js-bottomPlate').classList.add("member--bottomPlate--femaleOnLeft");
         document.getElementById('js-leftStud').classList.add("member--leftStud--female");
-    } else {
-        document.getElementById('js-topPlate').classList.remove("member--topPlate--femaleOnLeft");
-        document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--femaleOnLeft");
-        document.getElementById('js-leftStud').classList.remove("member--leftStud--female");
+    } else if (leftStudValue.value === 'male') {
+        document.getElementById('js-leftChaining').classList.remove("u-hidden");
+        document.getElementById('js-topChaining').classList.add("member--topChaining--maleOnLeft");
     }
 }
 
 rightStudValue.onchange = () => {
+    document.getElementById('js-rightChaining').classList.add("u-hidden");
+    document.getElementById('js-topChaining').classList.remove("member--topChaining--maleOnRight");
+
+    document.getElementById('js-topPlate').classList.remove("member--topPlate--femaleOnRight");
+    document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--femaleOnRight");
+    document.getElementById('js-rightStud').classList.remove("member--rightStud--female");
+
     if (rightStudValue.value === 'female') {
         document.getElementById('js-topPlate').classList.add("member--topPlate--femaleOnRight");
         document.getElementById('js-bottomPlate').classList.add("member--bottomPlate--femaleOnRight");
         document.getElementById('js-rightStud').classList.add("member--rightStud--female");
-    } else {
-        document.getElementById('js-topPlate').classList.remove("member--topPlate--femaleOnRight");
-        document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--femaleOnRight");
-        document.getElementById('js-rightStud').classList.remove("member--rightStud--female");
+    } else if (rightStudValue.value === 'male') {
+        document.getElementById('js-rightChaining').classList.remove("u-hidden");
+        document.getElementById('js-topChaining').classList.add("member--topChaining--maleOnRight");
     }
 }
