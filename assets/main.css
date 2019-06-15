@@ -1,74 +1,74 @@
-.frameDimensionsForm {
+.wallDimensionsForm {
     margin: auto;
     margin-bottom: 24px;
     width: 300px;
 }
 
-.frameDimensionsForm * {
+.wallDimensionsForm * {
     height: 30px;
     margin-bottom: 8px;
 }
 
-#frameTemplate {
+#wallTemplate {
     background: url("stud.svg") repeat left bottom;
     position: relative;
     margin: auto;
 }
 
-.frame {
+.wall {
     background-color: white;
     border: 1px solid grey;
     position: absolute;
 }
 
-.frame--rightStud {
+.wall--rightStud {
     width: 7px;
     height: calc(100% - 24px);
     right: -1px;
     top: 15px;
 }
 
-.frame--rightStud--female {
+.wall--rightStud--female {
     right: 16px;
 }
 
-.frame--leftStud {
+.wall--leftStud {
     width: 7px;
     height: calc(100% - 24px);
     left: -1px;
     top: 15px;
 }
 
-.frame--leftStud--female {
+.wall--leftStud--female {
     left: 16px;
 }
 
-.frame--chaining {
+.wall--chaining {
     height: 7px;
     width: 100%;
     left: -1px;
     top: -1px;
 }
 
-.frame--topPlate {
+.wall--topPlate {
     height: 7px;
     width: 100%;
     left: -1px;
     top: 7px;
 }
 
-.frame--bottomPlate {
+.wall--bottomPlate {
     height: 7px;
     right: -1px;
     left: -1px;
     bottom: -1px;
 }
 
-.frame--bottomPlate--leftFemale {
+.wall--bottomPlate--leftFemale {
     left: 16px;
 }
 
-.frame--bottomPlate--rightFemale {
+.wall--bottomPlate--rightFemale {
     right: 16px;
 }
 
@@ -77,7 +77,7 @@
     position: absolute;
 } 
 
-.dimension--frameHeight {
+.dimension--wallHeight {
     height: 100%;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
@@ -85,7 +85,7 @@
     width: 10px;
 }
 
-.dimension--frameHeight div {
+.dimension--wallHeight div {
     flex-direction: column;
     justify-content: center;
     display: flex;
@@ -94,7 +94,7 @@
     padding-left: 10px;
 }
 
-.dimension--frameWidth {
+.dimension--wallWidth {
     width: 100%;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
@@ -102,7 +102,7 @@
     height: 10px;
 }
 
-.dimension--frameWidth div {
+.dimension--wallWidth div {
     justify-content: center;
     display: flex;
     border-top: 1px solid grey;

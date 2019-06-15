@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <form class="frameDimensionsForm">
-        Largeur: <input type="number" id="js-input-frameWidth" value="400"> cms<br>
-        Hauteur: <input type="number" id="js-input-frameHeight"value="240"> cms<br>
+    <form class="wallDimensionsForm">
+        Largeur: <input type="number" id="js-input-wallWidth" value="400"> cms<br>
+        Hauteur: <input type="number" id="js-input-wallHeight"value="240"> cms<br>
         Côté gauche : <select id="js-select-leftStud">
             <option></option>
             <option value="female">Female</option>
@@ -21,14 +21,14 @@
             <option value="female">Female</option>
         </select><br>
     </form>
-    <div id="frameTemplate">
-        <div class="dimension dimension--frameWidth"><div id="js-display-frameWidth"></div></div>
-        <div class="dimension dimension--frameHeight"><div id="js-display-frameHeight"></div></div>
-        <div id="js-chaining" class="frame frame--chaining"></div>
-        <div id="js-topPlate" class="frame frame--topPlate"></div>
-        <div id="js-bottomPlate" class="frame frame--bottomPlate"></div>
-        <div id="js-leftStud" class="frame frame--leftStud"></div>
-        <div id="js-rightStud" class="frame frame--rightStud"></div>
+    <div id="wallTemplate">
+        <div class="dimension dimension--wallWidth"><div id="js-display-wallWidth"></div></div>
+        <div class="dimension dimension--wallHeight"><div id="js-display-wallHeight"></div></div>
+        <div id="js-chaining" class="wall wall--chaining"></div>
+        <div id="js-topPlate" class="wall wall--topPlate"></div>
+        <div id="js-bottomPlate" class="wall wall--bottomPlate"></div>
+        <div id="js-leftStud" class="wall wall--leftStud"></div>
+        <div id="js-rightStud" class="wall wall--rightStud"></div>
     </div>
     <script src="assets/main.js"></script>
 </body>
