@@ -52,7 +52,7 @@
 
 .member--topPlate {
     height: 7px;
-    width: 100%;
+    right: -1px;
     left: -1px;
     top: 7px;
 }
@@ -64,11 +64,11 @@
     bottom: -1px;
 }
 
-.member--bottomPlate--leftFemale {
+.member--topPlate--femaleOnLeft, .member--bottomPlate--femaleOnLeft {
     left: 16px;
 }
 
-.member--bottomPlate--rightFemale {
+.member--topPlate--femaleOnRight, .member--bottomPlate--femaleOnRight  {
     right: 16px;
 }
 

@@ -26,20 +26,24 @@ wallHeightValue.onkeyup = () => {
 
 leftStudValue.onchange = () => {
     if (leftStudValue.value === 'female') {
-        document.getElementById('js-bottomPlate').classList.add("member--bottomPlate--leftFemale");
+        document.getElementById('js-topPlate').classList.add("member--topPlate--femaleOnLeft");
+        document.getElementById('js-bottomPlate').classList.add("member--bottomPlate--femaleOnLeft");
         document.getElementById('js-leftStud').classList.add("member--leftStud--female");
     } else {
-        document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--leftFemale");
+        document.getElementById('js-topPlate').classList.remove("member--topPlate--femaleOnLeft");
+        document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--femaleOnLeft");
         document.getElementById('js-leftStud').classList.remove("member--leftStud--female");
     }
 }
 
 rightStudValue.onchange = () => {
     if (rightStudValue.value === 'female') {
-        document.getElementById('js-bottomPlate').classList.add("member--bottomPlate--rightFemale");
+        document.getElementById('js-topPlate').classList.add("member--topPlate--femaleOnRight");
+        document.getElementById('js-bottomPlate').classList.add("member--bottomPlate--femaleOnRight");
         document.getElementById('js-rightStud').classList.add("member--rightStud--female");
     } else {
-        document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--rightFemale");
+        document.getElementById('js-topPlate').classList.remove("member--topPlate--femaleOnRight");
+        document.getElementById('js-bottomPlate').classList.remove("member--bottomPlate--femaleOnRight");
         document.getElementById('js-rightStud').classList.remove("member--rightStud--female");
     }
 }
