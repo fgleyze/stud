@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { pxToCm } from "../modules/dimensionsConverter.js";
+import Frame from "./Frame.jsx";
+import Member from "./Member.jsx";
 
 class Wall extends Component {
   static propTypes = {
@@ -10,33 +12,32 @@ class Wall extends Component {
     rightSideType: PropTypes.string.isRequired
   };
 
-  renderStuds = (wallWidth, femaleLeftSide, femaleRightSide) => {
-      const sideStudsWidth = 16;
-      const leftOffset = femaleLeftSide ? 27 : 0;
-      const rightOffset = femaleRightSide ? 27 : 0;
+  renderStuds = (wallWidth, femaleLeftSide, femaleRightSide, maleRightSide) => {
+    const sideStudsWidth = 16;
+    const leftOffset = femaleLeftSide ? 27 : 0;
+    const rightOffset = femaleRightSide || maleRightSide ? 27 : 0;
 
-      const numberOfStuds = Math.floor((wallWidth - (sideStudsWidth + leftOffset + rightOffset))/120);
-      const studOffsets = [];
-    
+    const numberOfStuds = Math.floor(
+      (wallWidth - (sideStudsWidth + leftOffset + rightOffset)) / 120
+    );
+    const studOffsets = [];
+
     let i = 1;
 
     while (i <= numberOfStuds) {
-        studOffsets.push(i*120 + leftOffset);
-        i++;
+      studOffsets.push(i * 120 + leftOffset);
+      i++;
     }
 
-    return studOffsets.map(studOffset => {
-        return<div class="member member--stud" style={{ left: `${studOffset}px` }}>{}</div>;
+    return studOffsets.map(offset => {
+      return (
+        <Member key={offset} className="member--stud" style={{ left: `${offset}px` }}/>
+      );
     });
   };
 
   render() {
     const { wallWidth, wallHeight, leftSideType, rightSideType } = this.props;
-
-    const femaleLeftSide = leftSideType === 'female';
-    const maleLeftSide = leftSideType === 'male';
-    const femaleRightSide = rightSideType === 'female';
-    const maleRightSide = rightSideType === 'male';
 
     return (
       <div
@@ -50,16 +51,14 @@ class Wall extends Component {
           <div>{pxToCm(wallHeight)} cm</div>
         </div>
 
-        <div className={`member member--topChaining ${maleLeftSide && "member--topChaining--maleOnLeft"} ${maleRightSide && "member--topChaining--maleOnRight"}`} />
-        <div className={`member member--topPlate ${femaleLeftSide && "member--topPlate--femaleOnLeft"} ${femaleRightSide && "member--topPlate--femaleOnRight"}`} />
-        <div className={`member member--bottomPlate ${femaleLeftSide && "member--bottomPlate--femaleOnLeft"} ${femaleRightSide && "member--bottomPlate--femaleOnRight"}`} />
-        <div className={`member member--leftStud ${femaleLeftSide && "member--leftStud--female"}`} />
-        <div className={`member member--rightStud ${femaleRightSide && "member--rightStud--female"}`} />
+        <Frame leftSideType={leftSideType} rightSideType={rightSideType} />
 
-        <div className={`member member--leftChaining ${maleLeftSide && "u-show"}`}></div>
-        <div className={`member member--rightChaining ${maleRightSide && "u-show"}`}></div>
-
-        {this.renderStuds(wallWidth, femaleLeftSide, femaleRightSide)}
+        {this.renderStuds(
+          wallWidth,
+          leftSideType === "female",
+          rightSideType === "female",
+          rightSideType === "male"
+        )}
       </div>
     );
   }
