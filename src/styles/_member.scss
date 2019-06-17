@@ -1,0 +1,89 @@
+.member {
+    background-color: white;
+    border: 1px solid grey;
+    height: 7px;
+    position: absolute;
+    width: 7px;
+}
+
+.member--rightStud {
+    height: calc(100% - 24px);
+    right: -1px;
+    top: 15px;
+}
+
+.member--rightStud--female {
+    right: 27px;
+}
+
+.member--leftStud {
+    height: calc(100% - 24px);
+    left: -1px;
+    top: 15px;
+}
+
+.member--leftStud--female {
+    left: 27px;
+}
+
+.member--topChaining {
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    width: auto;
+}
+
+.member--topChaining--maleOnLeft {
+    left: 27px;
+}
+
+.member--topChaining--maleOnRight {
+    right: 27px;
+}
+
+.member--topPlate {
+    left: -1px;
+    right: -1px;
+    top: 7px;
+    width: auto;
+}
+
+.member--bottomPlate {
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    width: auto;
+}
+
+.member--topPlate--femaleOnLeft,
+.member--bottomPlate--femaleOnLeft {
+    left: 27px;
+}
+
+.member--topPlate--femaleOnRight,
+.member--bottomPlate--femaleOnRight {
+    right: 27px;
+}
+
+.member--leftChaining {
+    display: none;
+    left: 7px;
+    height: calc(100% - 24px);
+    top: 15px;
+    width: 27px;
+}
+
+.member--rightChaining {
+    display: none;
+    height: calc(100% - 24px);
+    right: 7px;
+    top: 15px;
+    width: 27px;
+}
+
+.member--stud {
+    height: calc(100% - 24px);
+    left: 120px;
+    top: 15px;
+    width: 7px;
+}

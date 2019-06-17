@@ -1,0 +1,19 @@
+@import 'styles/_utility.scss';
+@import 'styles/_member.scss';
+@import 'styles/_dimensionLine.scss';
+
+.wallDimensionsForm {
+  margin: auto;
+  margin-bottom: 24px;
+  width: 300px;
+}
+
+.wallDimensionsForm * {
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+#wall {
+  position: relative;
+  margin: auto;
+}

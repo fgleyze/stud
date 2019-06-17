@@ -1,0 +1,40 @@
+$lineStyle: 1px solid grey;
+
+.dimensionLine {
+    display: flex;
+    position: absolute;
+} 
+
+.dimensionLine--wallHeight {
+    height: calc(100% - 2px);
+    border-top: $lineStyle;
+    border-bottom: $lineStyle;
+    right: -20px;
+    width: 10px;
+}
+
+.dimensionLine--wallWidth {
+    width: calc(100% - 2px);
+    border-left: $lineStyle;
+    border-right: $lineStyle;
+    bottom: -20px;
+    height: 10px;
+}
+
+.dimensionLine--wallHeight div {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    border-left: $lineStyle;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+.dimensionLine--wallWidth div {
+    justify-content: center;
+    display: flex;
+    border-top: $lineStyle;
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 10px;
+}
