@@ -12,33 +12,25 @@
     top: 15px;
 }
 
-.member--rightStud--female {
-    right: 27px;
-}
-
 .member--leftStud {
     height: calc(100% - 24px);
     left: -1px;
     top: 15px;
 }
 
-.member--leftStud--female {
-    left: 27px;
-}
-
 .member--topChaining {
-    left: -1px;
-    right: -1px;
+    left: 27px;
+    right: 27px;
     top: -1px;
     width: auto;
 }
 
-.member--topChaining--maleOnLeft {
-    left: 27px;
+.member--topChaining--femaleOnLeft {
+    left: -27px;
 }
 
-.member--topChaining--maleOnRight {
-    right: 27px;
+.member--topChaining--femaleOnRight {
+    right: -27px;
 }
 
 .member--topPlate {
@@ -53,16 +45,6 @@
     left: -1px;
     right: -1px;
     width: auto;
-}
-
-.member--topPlate--femaleOnLeft,
-.member--bottomPlate--femaleOnLeft {
-    left: 27px;
-}
-
-.member--topPlate--femaleOnRight,
-.member--bottomPlate--femaleOnRight {
-    right: 27px;
 }
 
 .member--leftChaining {

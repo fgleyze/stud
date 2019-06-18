@@ -5,7 +5,9 @@ import { pxToCm } from "../modules/dimensionsConverter.js";
 class Member extends Component {
   static propTypes = {
     className: PropTypes.string.isRequired,
-    style: PropTypes.object.isRequired
+    style: PropTypes.object.isRequired,
+    addToMembers: PropTypes.func.isRequired,
+    removeToMembers: PropTypes.func.isRequired
   };
 
   state = {
@@ -13,9 +15,12 @@ class Member extends Component {
   };
 
   hoverOn = value => {
-    console.log(pxToCm(value.currentTarget.clientHeight));
-    console.log(pxToCm(value.currentTarget.clientWidth));
     this.setState({ hover: true });
+    const lenght = Math.max(
+      pxToCm(value.currentTarget.clientHeight),
+      pxToCm(value.currentTarget.clientWidth)
+    );
+    console.log(lenght);
   };
 
   hoverOff = () => {

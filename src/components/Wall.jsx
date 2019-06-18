@@ -12,20 +12,19 @@ class Wall extends Component {
     rightSideType: PropTypes.string.isRequired
   };
 
-  renderStuds = (wallWidth, femaleLeftSide, femaleRightSide, maleRightSide) => {
+  renderStuds = (wallWidth, maleRightSide) => {
     const sideStudsWidth = 16;
-    const leftOffset = femaleLeftSide ? 27 : 0;
-    const rightOffset = femaleRightSide || maleRightSide ? 27 : 0;
+    const rightOffset = maleRightSide ? 27 : 0;
 
     const numberOfStuds = Math.floor(
-      (wallWidth - (sideStudsWidth + leftOffset + rightOffset)) / 120
+      (wallWidth - (sideStudsWidth + rightOffset)) / 120
     );
     const studOffsets = [];
 
     let i = 1;
 
     while (i <= numberOfStuds) {
-      studOffsets.push(i * 120 + leftOffset);
+      studOffsets.push(i * 120);
       i++;
     }
 
@@ -55,8 +54,6 @@ class Wall extends Component {
 
         {this.renderStuds(
           wallWidth,
-          leftSideType === "female",
-          rightSideType === "female",
           rightSideType === "male"
         )}
       </div>

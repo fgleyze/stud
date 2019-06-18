@@ -19,27 +19,21 @@ class Frame extends Component {
     return (
       <div>
         <Member
-          className={`member--topChaining ${maleLeftSide &&
-            "member--topChaining--maleOnLeft"} ${maleRightSide &&
-            "member--topChaining--maleOnRight"}`}
+          className={`member--topChaining ${femaleLeftSide &&
+            "member--topChaining--femaleOnLeft"} ${femaleRightSide &&
+            "member--topChaining--femaleOnRight"}`}
         />
         <Member
-          className={`member--topPlate ${femaleLeftSide &&
-            "member--topPlate--femaleOnLeft"} ${femaleRightSide &&
-            "member--topPlate--femaleOnRight"}`}
+          className={`member--topPlate`}
         />
         <Member
-          className={`member--bottomPlate ${femaleLeftSide &&
-            "member--bottomPlate--femaleOnLeft"} ${femaleRightSide &&
-            "member--bottomPlate--femaleOnRight"}`}
+          className={`member--bottomPlate`}
         />
         <Member
-          className={`member--leftStud ${femaleLeftSide &&
-            "member--leftStud--female"}`}
+          className={`member--leftStud`}
         />
         <Member
-          className={`member--rightStud ${femaleRightSide &&
-            "member--rightStud--female"}`}
+          className={`member--rightStud`}
         />
         <Member
           className={`member--leftChaining ${maleLeftSide && "u-show"}`}

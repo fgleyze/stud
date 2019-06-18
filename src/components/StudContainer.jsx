@@ -49,9 +49,9 @@ class StudContainer extends Component {
             value={this.state.leftSideType}
             onChange={this.handleLeftSideTypeChange}
           >
-            <option value="neutral" />
-            <option value="female">Female</option>
-            <option value="male">Male</option>
+            <option value="neutral">Female straigth junction</option>
+            <option value="male">Male corner</option>
+            <option value="female">Female corner / Male straigth junction</option>
           </select>
           <br />
           right side:{" "}
@@ -59,9 +59,9 @@ class StudContainer extends Component {
             value={this.state.rightSideType}
             onChange={this.handleRightSideTypeChange}
           >
-            <option value="neutral" />
-            <option value="female">Female</option>
-            <option value="male">Male</option>
+            <option value="neutral">Female straigth junction</option>
+            <option value="male">Male corner</option>
+            <option value="female">Female corner / Male straigth junction</option>
           </select>
           <br />
         </form>
