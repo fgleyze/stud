@@ -1,10 +1,23 @@
-version: '3'
+version: '3.8'
 
 services:
-    nginx:
-        image: nginx
-        ports:
-            - "0.0.0.0:96:80"
-        volumes:
-            - $PWD/sites.conf:/etc/nginx/conf.d/default.conf
-            - $PWD/build/:/usr/share/nginx/html
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: stud_app
+    restart: unless-stopped
+    networks:
+      - web_gateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.stud.rule=Host(`stud.francoisgleyze.com`)"
+      - "traefik.http.routers.stud.entrypoints=websecure"
+      - "traefik.http.routers.stud.tls=true"
+      - "traefik.http.routers.stud.tls.certresolver=letsencrypt"
+      - "traefik.http.services.stud.loadbalancer.server.port=80"
+      - "traefik.docker.network=web_gateway"
+
+networks:
+  web_gateway:
+    external: true
