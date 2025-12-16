@@ -1,2 +1,16 @@
-build/
+# Dependencies
 node_modules/
+
+# Build
+build/
+
+# Environment
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+.DS_Store
+*.log
+npm-debug.log*
